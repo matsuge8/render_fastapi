@@ -34,7 +34,7 @@ def omikuji():
 
     return omikuji_list[random.randrange(10)]
 
-    @app.get("/index")
+@app.get("/index")
 def index():
     html_content = """
     <html>
@@ -47,3 +47,7 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+@app.post("/present")
+async def new_naming(present):
+    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}
