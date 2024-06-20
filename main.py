@@ -37,13 +37,17 @@ def omikuji():
 @app.get("/index")
 def index():
     html_content = """
-    <html>
+    <html lang="ja">
         <head>
-            <title>Some HTML in here</title>
-        </head>
-        <body>
-            <h1>Look ma! HTML!</h1>
-        </body>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2 style="color: #ffffff; background-color: #00ff00;">見出しレベル2</h2>
+        <p style="color: #ff0000">あいうえお</p>
+        <h2 style="color: #ffffff; background-color: #00ff00;">見出しレベル2</h2>
+        <p style="color: #ff0000">かきくけこ</p>
+        <a href="https://www.google.co.jp/" title="検索">ググる</a>
+    </body>
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
@@ -51,3 +55,4 @@ def index():
 @app.post("/present")
 async def new_naming(present):
     return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}
+
