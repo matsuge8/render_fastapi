@@ -53,13 +53,8 @@ def index():
     return HTMLResponse(content=html_content, status_code=200)
 
 @app.post("/present")
-async def new_naming(number):
-    int n = int({number});
-    if(n % 2 == 0){
-        return{"response": f"サーバです。入力された数字は{number}で、偶数です。"}
-    }
-    else if(n % 2 == 1){
-        return {"response": f"サーバです。入力された数字は{number}で奇数です。"}
-    }
-    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}
+async def new_naming(present):
+    length = len(present)
+
+    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。", "length": length}
 
