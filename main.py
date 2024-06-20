@@ -54,7 +54,6 @@ def index():
 
 @app.post("/present")
 async def new_naming(present):
-    length = len(present)
 
     return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。", "length": length}
 
