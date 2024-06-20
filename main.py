@@ -55,16 +55,5 @@ def index():
 
 @app.post("/present")
 async def new_naming(present):
-   colors_list = [
-        "赤色",
-        "青色",
-        "黄色",
-        "緑色",
-        "オレンジ",
-        "ピンク",
-        "紫色",
-        "水色",
-        "朱色",
-        "黒色"
-    ]
-    return {"response": f"メッセージ {present}ありがとう。今日のあなたのラッキーカラーは{colors_list[random.randrange(10)]}"}
+   
+    return {"response": f"メッセージ {present}ありがとう。今日のあなたのラッキーカラーは赤色"}
