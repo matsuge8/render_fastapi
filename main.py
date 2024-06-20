@@ -54,7 +54,7 @@ def index():
 
 @app.post("/present")
 async def new_naming(number):
-    int n = {number}
+    int n = int({number});
     if(n % 2 == 0){
         return{"response": f"サーバです。入力された数字は{number}で、偶数です。"}
     }
