@@ -5,8 +5,6 @@ from fastapi import FastAPI
 import random  # randomライブラリを追加
 
 from fastapi.responses import HTMLResponse #インポート
-from fastapi import Body
-
 
 app = FastAPI()
 
@@ -56,6 +54,21 @@ def index():
 
 
 @app.post("/present")
-async def new_naming(present: Present):
-    present_length = len(present)
-    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。", "length": present_length}
+async def new_naming(present):
+   colors_list = [
+        "赤色",
+        "青色",
+        "黄色",
+        "緑色",
+        "オレンジ",
+        "ピンク",
+        "紫色",
+        "水色",
+        "朱色",
+        "黒色"
+    ]
+     luckyColor_result = colors_list[random.randrange(10)]
+    return {
+        "response": f"メッセージ {present}ありがとう。今日のあなたのラッキーカラーは",
+        "omikuji": omikuji_result
+    }
