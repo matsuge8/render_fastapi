@@ -52,8 +52,11 @@ def index():
     """
     return HTMLResponse(content=html_content, status_code=200)
 
-@app.post("/present")
-async def new_naming(present):
+    class Present(BaseModel):
+    present: str
 
-    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。", "length": length}
+@app.post("/present")
+async def new_naming(present: Present):
+ present_length = len(present.present)
+    return {"response": f"サーバです。メリークリスマス！ {present.present}ありがとう。お返しはキャンディーです。", "length": present_length}
 
