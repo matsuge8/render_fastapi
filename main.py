@@ -6,6 +6,8 @@ import random  # randomライブラリを追加
 
 from fastapi.responses import HTMLResponse #インポート
 
+from pydantic import BaseModel
+
 app = FastAPI()
 
 
