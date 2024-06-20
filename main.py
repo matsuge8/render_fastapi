@@ -42,10 +42,10 @@ def index():
         <meta charset="UTF-8">
     </head>
     <body>
-        <h2 style="color: #ffffff; background-color: #00ff00;">見出しレベル2</h2>
-        <p style="color: #ff0000">あいうえお</p>
-        <h2 style="color: #ffffff; background-color: #00ff00;">見出しレベル2</h2>
-        <p style="color: #ff0000">かきくけこ</p>
+        <h2 style="color: #ffffff; background-color: #00ff00;">好きな歌手</h2>
+        <p style="color: #ff0000">藤井風</p>
+        <h2 style="color: #ffffff; background-color: #00ff00;">はまっている曲</h2>
+        <p style="color: #ff0000">藤井風‐花</p>
         <a href="https://www.google.co.jp/" title="検索">ググる</a>
     </body>
     </html>
