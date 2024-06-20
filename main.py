@@ -67,5 +67,4 @@ async def new_naming(present):
         "朱色",
         "黒色"
     ]
-     luckyColor_result = colors_list[random.randrange(10)]
-    return {"response": f"メッセージ {present}ありがとう。今日のあなたのラッキーカラーは{luckyColor_result}"}
+    return {"response": f"メッセージ {present}ありがとう。今日のあなたのラッキーカラーは{colors_list[random.randrange(10)]}"}
